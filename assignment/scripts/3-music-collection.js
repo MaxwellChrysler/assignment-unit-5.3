@@ -9,9 +9,9 @@ function addToCollection(title, artist, yearPublished){ // Have to have room for
 }
 
 
-addToCollection("Give yourself a try","a brief inquiry into online relationships","2018");
-addToCollection("Blessings ft. (Ty Dolla$)","Coloring book","2016");
-addToCollection("Derezzed","Daft Punk , Avicii ","2011");
+addToCollection("Give yourself a try","The 1975","2018"); // Fixed artist being filled with alblum name
+addToCollection("Blessings ft. (Ty Dolla$)","Chance the Rapper","2016"); // Fixed artist being filled with alblum name
+addToCollection("Derezzed","Daft Punk , Avicii ","2011"); // There is supposed to be room between daft punk and acivii
 addToCollection("Desperado","The Eagles","1973");
 addToCollection("Everybody wants to rule the world","Tears for fears","1985");
 addToCollection("Hollywood baby","100 Gecs","2023");
@@ -36,10 +36,12 @@ function findByArtist(artist){
     if (artist === collection[i].artist){ //  check to see if the values in the arrays artist section are found within the array
       musicBy.push(collection[i]); // push the the values found from collection into the new array musicBy
     }
-    
   }
+  return musicBy;
 }
 
+console.log(findByArtist("The Eagles"));
+console.log(findByArtist("Chicago"));
 /* - Create a variable `collection` that starts as an empty array.
 
 - Add a function named `addToCollection`. This function should:
