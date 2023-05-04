@@ -28,6 +28,18 @@ function showCollection(musicInfoArray){ //
 showCollection(collection);
 
 
+let artistArray = [];
+
+function findByArtist(artist){
+  let musicBy = [];
+  for( let i =0;i< collection.length; i++){ //running the loop for the same length as we have songs in the inital array
+    if (artist === collection[i].artist){ //  check to see if the values in the arrays artist section are found within the array
+      musicBy.push(collection[i]); // push the the values found from collection into the new array musicBy
+    }
+    
+  }
+}
+
 /* - Create a variable `collection` that starts as an empty array.
 
 - Add a function named `addToCollection`. This function should:
